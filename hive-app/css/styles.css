@@ -22,3 +22,20 @@
           transform: scaleX(1);
   opacity: 1;
 }
+
+.section-heading {
+  padding-left: 20px;
+}
+
+.panel {
+  /*height: 200px;*/
+}
+
+.panel-primary {
+  border: 1px solid #444444;
+}
+
+.panel-primary > .panel-heading {
+  background-color: #444444;
+  border: 1px solid #444444;
+}

@@ -1,0 +1,231 @@
+<div class="container-fluid">
+
+    <div class="section-heading"><!-- 
+        <i class="icon ion-ios-home"></i> -->
+        <h3>My KPIs</h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Utilization
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-4" easypiechart id="utilization-chart" options="options" percent="KPI.utilization.percent"></div>
+                    
+                    <div class="col-xs-8 cards-table-col">
+                        <table id="cards-table">
+                            <tr>
+                                <td>Target</td>
+                                <td>{{KPI.utilization.target}}%</td>
+                            </tr>
+                            <tr>
+                                <td>As of</td>
+                                <td>{{KPI.utilization.relevantDate | date:"MM/dd/yyyy"}}</td>
+                            </tr>
+                            <tr>
+                                <td>Available</td>
+                                <td>{{KPI.utilization.availableDate | date:"MM/dd/yyyy"}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    YTD Late Timesheets
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-4 main-column">
+                        <p>{{KPI.lateTimeSheets.number}}</p>
+                    </div>
+                    
+                    <div class="col-xs-8 cards-table-col">
+                        <table id="cards-table">
+                            <tr>
+                                <td>Target</td>
+                                <td>{{KPI.lateTimeSheets.number}} or Less</td>
+                                <td> </td> <!-- The extra column is to give padding in fill width views -->
+                            </tr>
+                            <tr>
+                                <td>Current Missing</td>
+                                <td>{{KPI.lateTimeSheets.number}}</td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td>As of</td>
+                                <td>{{KPI.lateTimeSheets.relevantDate | date:"MM/dd/yyyy"}}</td>
+                                <td> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Revenue Managed
+                </div>
+
+                <div class="panel-body">
+                    <div class="col-xs-4 main-column">
+                        <p>{{KPI.revenueManaged.amount | currency:"$":0}}</p>
+                    </div>
+                    
+                    <div class="col-xs-8 cards-table-col">
+                        <table id="cards-table">
+                            <tr>
+                                <td>Target</td>
+                                <td>{{KPI.revenueManaged.target | currency:"$":0}}</td>
+                                <td> </td> <!-- The extra column is to give padding in fill width views -->
+                            </tr>
+                            <!-- <tr>
+                                <td>Current Missing</td>
+                                <td>{{KPI.revenueManaged.number}}</td>
+                                <td> </td>
+                            </tr> -->
+                            <tr>
+                                <td>As of</td>
+                                <td>{{KPI.revenueManaged.relevantDate | date:"MM/dd/yyyy"}}</td>
+                                <td> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Team Sales
+                </div>
+
+                <div class="panel-body">
+                    <div class="col-xs-4 main-column">
+                        <p>{{KPI.teamSales.amount | currency:"$":0}}</p>
+                    </div>
+                    
+                    <div class="col-xs-8 cards-table-col">
+                        <table id="cards-table">
+                            <tr>
+                                <td>Target</td>
+                                <td>{{KPI.teamSales.target | currency:"$":0}}</td>
+                                <td> </td> <!-- The extra column is to give padding in fill width views -->
+                            </tr>
+                            <!-- <tr>
+                                <td>Current Missing</td>
+                                <td>{{KPI.teamSales.number}}</td>
+                                <td> </td>
+                            </tr> -->
+                            <tr>
+                                <td>As of</td>
+                                <td>{{KPI.teamSales.relevantDate | date:"MM/dd/yyyy"}}</td>
+                                <td> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Lead Sales
+                </div>
+
+                <div class="panel-body">
+                    <div class="col-xs-4 main-column">
+                        <p>{{KPI.leadSales.amount | currency:"$":0}}</p>
+                    </div>
+                    
+                    <div class="col-xs-8 cards-table-col">
+                        <table id="cards-table">
+                            <tr>
+                                <td>Target</td>
+                                <td>{{KPI.leadSales.target | currency:"$":0}}</td>
+                                <td> </td> <!-- The extra column is to give padding in fill width views -->
+                            </tr>
+                            <!-- <tr>
+                                <td>Current Missing</td>
+                                <td>{{KPI.leadSales.number}}</td>
+                                <td> </td>
+                            </tr> -->
+                            <tr>
+                                <td>As of</td>
+                                <td>{{KPI.leadSales.relevantDate | date:"MM/dd/yyyy"}}</td>
+                                <td> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Assignment Appraisals
+                </div>
+
+                <div class="panel-body">
+                    <div class="col-xs-4 main-column">
+                        <p>{{KPI.assignmentAppraisals.amount}}</p>
+                    </div>
+                    
+                    <div class="col-xs-8 cards-table-col">
+                        <table id="cards-table">
+                            <tr>
+                                <td>Target</td>
+                                <td>{{KPI.assignmentAppraisals.target}} at Year End</td>
+                                <td> </td> <!-- The extra column is to give padding in fill width views -->
+                            </tr>
+                            <!-- <tr>
+                                <td>Current Missing</td>
+                                <td>{{KPI.assignmentAppraisals.number}}</td>
+                                <td> </td>
+                            </tr> -->
+                            <tr>
+                                <td>As of</td>
+                                <td>{{KPI.assignmentAppraisals.relevantDate | date:"MM/dd/yyyy"}}</td>
+                                <td> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Onshore Staff Consultant Account Resources (Individual) - Info
+                </div>
+                <div class="panel-body">
+                    No Data found for your UPN.
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="item item-divider">
+                    YTD Late Timesheets
+                </div>
+                <div class="item item-text-wrap">
+                    This is a basic Card with some text.
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+</ion-list>
