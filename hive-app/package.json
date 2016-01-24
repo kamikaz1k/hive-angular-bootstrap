@@ -1,0 +1,10 @@
+{
+  "name": "Hive-Angular-Bootstrap",
+  "version": "0.0.1",
+  "description": "HIVE clone in angular",
+  "dependencies": {
+    "angular": "^1.4.9",
+    "angular-animate": "^1.4.9",
+    "angular-ui-router": "^0.2.15"
+  }
+}
