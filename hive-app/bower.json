@@ -1,0 +1,7 @@
+{
+  "name": "Hive-Angular-Bootstrap",
+  "private": "true",
+  "dependencies": {
+    "jquery.easy-pie-chart": "~2.1.6"
+  }
+}
