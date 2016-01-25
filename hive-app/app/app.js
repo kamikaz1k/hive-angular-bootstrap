@@ -15,23 +15,15 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
   .state('app.mykpi', {
     url: '/mykpi',
-    // views: {
-      // 'menuContent': {
-        templateUrl: 'templates/my-kpis.html',
-          controller: 'KPICtrl'
-      // }
-    // }
+    templateUrl: 'templates/my-kpis.html',
+    controller: 'KPICtrl'
   })
 
   .state('app.expectations', {
     url: '/expectations',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/expectations.html',
-          controller: 'ExpectationsCtrl'
-      }
-    }
-  })
+    templateUrl: 'templates/expectations.html',
+    controller: 'ExpectationsCtrl'
+  }) 
 
   .state('app.glossary', {
     url: '/glossary',

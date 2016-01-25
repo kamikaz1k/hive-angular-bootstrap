@@ -78,3 +78,36 @@ table#cards-table {
     background-color: #4CAF50;
     color: white;
 }
+
+table#expectations-table {
+    font-size:14px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    padding: 0px; /*Remove padding between card and table*/
+}
+
+/*Make the last column take up remaining space in parent div*/
+table td:last-child {
+    /*width: 100%;*/
+}
+
+#expectations-table th {
+    text-align: center;
+}
+
+#expectations-table tr:hover {
+    background-color: #eaf4ff;
+}
+
+#expectations-table tr:hover td {
+    background-color: transparent; /* or #000 */
+}
+
+#expectations-table th {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #444444;
+    color: white;
+}
