@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+    <div class="section-heading">
+        <h3><i class="fa fa-search"></i> Glossary</h3>
+    </div>
+
+    <div class="panel panel-primary"> <!-- style="height: 100%;"> -->
+
+        <div class="panel-header">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                    
+                </span>
+                <input type="text" class="form-control" ng-model="filter" placeholder="Search...">
+            </div>
+        </div>
+
+        <table class="table table-striped" id="expectations-table">
+            <tr>
+                <th style="text-align: left;">Abbrev.</th>
+                <th style="text-align: left;">Definition</th>
+                <th style="text-align: left;">Description</th>
+            </tr>
+            <!-- For when it is consumed by the service -->
+            <tr ng-repeat="item in glossary | filter:filter">
+                <td>{{item.abbreviation}}</td>
+                <td>{{item.definition}}</td>
+                <td>{{item.description}}</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>

@@ -1,4 +1,4 @@
-var routerApp = angular.module('hive-angular', ['ui.router','hive.controllers','easypiechart']);
+var routerApp = angular.module('hive-angular', ['ui.router','hive.controllers','hive.services','easypiechart']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
     
@@ -27,12 +27,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
   .state('app.glossary', {
     url: '/glossary',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/glossary.html',
-          controller: 'GlossaryCtrl'
-      }
-    }
+    templateUrl: 'templates/glossary.html',
+    controller: 'GlossaryCtrl'
   })
 
   .state('app.organization', {
