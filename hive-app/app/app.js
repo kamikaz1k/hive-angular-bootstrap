@@ -33,12 +33,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
   .state('app.organization', {
     url: '/organization',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/organization.html',
-          controller: 'OrganizationCtrl'
-      }
-    }
+    templateUrl: 'templates/organization.html',
+    controller: 'OrganizationCtrl'
   })
         
 });

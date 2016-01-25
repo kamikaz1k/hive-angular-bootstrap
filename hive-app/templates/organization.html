@@ -1,0 +1,44 @@
+<div class="container-fluid">
+
+    <div class="section-heading">
+        <h3><i class="fa fa-sitemap"></i> North America Organization</h3>
+    </div>
+
+    <div class="panel panel-primary">
+
+        <div class="panel-body">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                </span>
+                <input type="text" class="form-control" ng-model="filter" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table id="expectations-table" class="table table-striped">
+                <tr>
+                    <th>BU</th>
+                    <th>Leadership Role</th>
+                    <th>Sub Unit</th>
+                    <th>Role Area</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+                <!-- For when it is consumed by the service -->
+                <tr ng-repeat="item in viewData.organization | filter:filter">
+                    <td>{{item["BU"]}}</td>
+                    <td>{{item["Leadership Role"]}}</td>
+                    <td>{{item["Sub Unit"]}}</td>
+                    <td>{{item["Role Area"]}}</td>
+                    <td>{{item["Name"]}}</td>
+                    <td>{{item["Email"]}}</td>
+                    <td>{{item["Phone"]}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>
