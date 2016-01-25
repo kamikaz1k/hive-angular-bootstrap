@@ -159,7 +159,7 @@ angular.module('hive.controllers', [])
 
 })
 
-.controller('OrganizationCtrl', function($scope, HiveServices, $http, $ionicModal) {
+.controller('OrganizationCtrl', function($scope, HiveServices, $http) {
 
   // $http.ajax({
   //       type: "GET",
@@ -168,12 +168,12 @@ angular.module('hive.controllers', [])
   //       success: function(data) {processData(data);}
   //    });
 
-  $scope.viewData = { organization: [] }; 
+  $scope.viewData = { organization: [], sortType: false, sortReverse: false }; 
 
-  $ionicModal.fromTemplateUrl('templates/contact-modal.html', { scope: $scope })
-  .then(function(modal) {
-      $scope.modal = modal;
-  });
+  // $ionicModal.fromTemplateUrl('templates/contact-modal.html', { scope: $scope })
+  // .then(function(modal) {
+  //     $scope.modal = modal;
+  // });
 
   $scope.showContacts = function(contact){
     console.log(contact);
