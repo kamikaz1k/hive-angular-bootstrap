@@ -18,15 +18,15 @@
         <div class="table-responsive">
             <table id="expectations-table" class="table table-striped">
                 <tr>
-                    <th ng-repeat="header in viewData.orgHeader" ng-click="viewData.sortType = header; viewData.sortReverse = !viewData.sortReverse">
+                    <th ng-repeat="header in viewData.orgHeader" ng-click="viewData.sortType == header ? viewData.sortReverse = !viewData.sortReverse : viewData.sortType = header;">
                         {{header}}
                         <span ng-show="viewData.sortType != header" class="fa fa-sort"></span>
-                        <span ng-show="viewData.sortType == header && !viewData.sortReverse" class="fa fa-caret-down"></span>
-                        <span ng-show="viewData.sortType == header && viewData.sortReverse" class="fa fa-caret-up"></span>
+                        <span ng-show="viewData.sortType == header && !viewData.sortReverse" class="fa fa-caret-up"></span>
+                        <span ng-show="viewData.sortType == header && viewData.sortReverse" class="fa fa-caret-down"></span>
                     </th>
                 </tr>
                 <!-- For when it is consumed by the service -->
-                <tr ng-repeat="item in viewData.organization | orderBy:'viewData.sortType':viewData.sortReverse | filter:filter">
+                <tr ng-repeat="item in viewData.organization | orderBy:'\u0022'+viewData.sortType+'\u0022':viewData.sortReverse | filter:filter">
                     <td>{{item["BU"]}}</td>
                     <td>{{item["Leadership Role"]}}</td>
                     <td>{{item["Sub Unit"]}}</td>
