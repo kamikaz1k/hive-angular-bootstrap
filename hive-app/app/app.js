@@ -2,7 +2,7 @@ var routerApp = angular.module('hive-angular', ['ui.router','hive.controllers','
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
     
-  $urlRouterProvider.otherwise('/app');
+  $urlRouterProvider.otherwise('/app/mykpi');
     
   $stateProvider
 
@@ -10,7 +10,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
     url: '/app',
     // abstract: true,
     templateUrl: 'templates/menu.html',
-    // controller: 'AppCtrl'
+    controller: 'AppCtrl'
   })
 
   .state('app.mykpi', {

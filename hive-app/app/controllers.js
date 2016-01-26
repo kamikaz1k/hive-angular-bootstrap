@@ -9,6 +9,8 @@ angular.module('hive.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
+  $scope.currentTab = '0';
+
   // Form data for the login modal
   $scope.loginData = {};
 
