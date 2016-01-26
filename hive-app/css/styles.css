@@ -51,6 +51,7 @@
 
 #utilization-chart {
   height: 100px;
+  text-align: center;
 }
 
 .main-column > p {
