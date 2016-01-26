@@ -25,6 +25,10 @@
 
 .navbar { border-radius:0; }
 
+.nav-tabs > li {
+  margin-top: 20px;
+}
+
 .section-heading {
   padding-left: 20px;
 }

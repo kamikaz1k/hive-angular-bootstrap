@@ -32,31 +32,31 @@
     <script src="app/services.js"></script>
 
     <!-- could easily use a custom property of the state here instead of 'name' -->
-    <title ng-bind="$state.current.name">TITLEZ</title>
+    <title>HIVE</title>
   
   </head>
 
     <!-- apply our angular app to our site -->
     <body ng-app="hive-angular">
 
-      <!-- NAVIGATION -->
-      <nav class="navbar navbar-inverse" role="navigation">
+      <!-- <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
           <div class="navbar-header">
-              <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+              <a class="navbar-brand" style="padding-top: 8px;" ui-sref="#">
+                <img style="width:120px" src="https://hive.cgadc.com/hive/img/hive-capgemini-logo2.png" alt="Capgemini">
+              </a>
           </div>
-          <ul class="nav navbar-nav">
-              <li><a ui-sref="home">Home</a></li>
-              <li><a ui-sref="about">About</a></li>
+          
+          <ul class="nav nav-tabs">
+            <li role="presentation" ng-class="{ 'active' : currentTab }"><a href="#/app/mykpi">My KPIs</a></li>
+            <li role="presentation" ng-class="{ 'active' : currentTab === '0' }"><a href="#/app/expectations">Expectations</a></li>
+            <li role="presentation"><a href="#/app/glossary">Glossary</a></li>
+            <li role="presentation"><a href="#/app/organization">NA Organization</a></li>
           </ul>
-      </nav>
 
-      <!-- MAIN CONTENT -->
-      <!-- <div class="container-fluid"> -->
+      </nav> -->
 
-          <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+      <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
       <div ui-view></div>
-
-      <!-- </div> -->
 
     </body>
 
