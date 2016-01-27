@@ -1,39 +1,28 @@
-# node-js-getting-started
+# hive-angular-bootstrap
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+This is a recreation of the Capgemini Hive app with Angular and Bootstrap.
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+## The App
 
-## Running Locally
+The app is stored under the [hive-app](hive-app/) directory.
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
-
+### To run this app run the following commands (assuming you have git and npm installed)
 ```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
+$ git clone https://github.com/kamikaz1k/hive-angular-bootstrap.git # or clone your own fork
+$ cd hive-angular-bootstrap
 $ npm install
-$ npm start
+$ node index.js
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+The app should now be running on [localhost:5000](http://localhost:5000/).
 
-## Deploying to Heroku
+## Libraries/Dependencies
 
-```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
+### Core App
+- [AngularJS](https://github.com/angular/angular.js)
+- [Angular UI Router](https://github.com/angular-ui/ui-router)
+- [Bootstrap 3 (CSS)](http://getbootstrap.com/)
+- [Easy Pie Chart (Angular)](https://github.com/rendro/easy-pie-chart)
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+### Node Server
+- [ExpressJS](https://github.com/expressjs)
