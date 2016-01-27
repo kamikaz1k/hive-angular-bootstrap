@@ -186,18 +186,7 @@ angular.module('hive.controllers', [])
   $scope.showContacts = function(contact){
     console.log(contact);
     $scope.selected = contact;
-
-    $scope.modal.show();
-
   }
-
-  $scope.closeModalView = function(){
-    $scope.modal.hide();
-  }
-
-  $scope.$on('$destroy', function() {
-    $scope.modal.remove();
-  });
 
   function processData(allText) {
       var delimiter = "\t";
