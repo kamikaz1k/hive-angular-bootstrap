@@ -1,6 +1,22 @@
 var routerApp = angular.module('hive-angular', ['ui.router','hive.controllers','hive.services','easypiechart']);
 
-routerApp.config(function($stateProvider, $urlRouterProvider) {
+routerApp
+
+.directive('sidebarDirective', function() {
+  return {
+    link : function(scope, element, attr) {
+      scope.$watch(attr.sidebarDirective, function(newVal) {
+        if(newVal) { 
+          element.addClass('show');
+        } else {
+          element.removeClass('show');
+        }
+      });
+    }
+  };
+})
+
+.config(function($stateProvider, $urlRouterProvider) {
     
   $urlRouterProvider.otherwise('/app/mykpi');
     

@@ -1,31 +1,27 @@
-      <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
-          <div class="navbar-header">
-              <a class="navbar-brand" style="padding-top: 8px;" ui-sref="#">
-                <img style="width:120px" src="https://hive.cgadc.com/hive/img/hive-capgemini-logo2.png" alt="Capgemini">
-              </a>
-          </div>
-          <!-- <ul class="nav navbar-nav">
-              <li><a ui-sref="home">Home</a></li>
-              <li><a ui-sref="about">About</a></li>
-          </ul> -->
-          <ul class="nav nav-tabs">
-            <li role="presentation" ng-class="{ 'active' : currentTab == 0 }" ng-click="currentTab = 0"><a href="#/app/mykpi">My KPIs</a></li>
-            <li role="presentation" ng-class="{ 'active' : currentTab == 1 }" ng-click="currentTab = 1"><a href="#/app/expectations">Expectations</a></li>
-            <li role="presentation" ng-class="{ 'active' : currentTab == 2 }" ng-click="currentTab = 2"><a href="#/app/glossary">Glossary</a></li>
-            <li role="presentation" ng-class="{ 'active' : currentTab == 3 }" ng-click="currentTab = 3"><a href="#/app/organization">NA Organization</a></li>
-            <li role="presentation" class="disabled"><a href="#/app/organization">Logout</a></li>
-          </ul>
+<nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
+  <div class="navbar-header">
+    <a class="navbar-brand" style="padding-top: 8px;" ui-sref="#">
+      <img style="width:120px" src="https://hive.cgadc.com/hive/img/hive-capgemini-logo2.png" alt="Capgemini">
+    </a>
+  </div>
+  <ul class="nav nav-tabs">
+    <li role="presentation" ng-class="{ 'active' : currentTab == 0 }" ng-click="currentTab = 0"><a href="#/app/mykpi">My KPIs</a></li>
+    <li role="presentation" ng-class="{ 'active' : currentTab == 1 }" ng-click="currentTab = 1"><a href="#/app/expectations">Expectations</a></li>
+    <li role="presentation" ng-class="{ 'active' : currentTab == 2 }" ng-click="currentTab = 2"><a href="#/app/glossary">Glossary</a></li>
+    <li role="presentation" ng-class="{ 'active' : currentTab == 3 }" ng-click="currentTab = 3"><a href="#/app/organization">NA Organization</a></li>
+    <li role="presentation" class="disabled"><a href="#/app/organization">Logout</a></li>
+  </ul>
 
-      </nav>
+</nav>
 
-<!-- <div class="jumbotron text-center">
-    <p>Dashboard Selections <span class="text-danger">Below</span>.</p>   
-
-    <a ui-sref=".mykpi" class="btn btn-primary">My KPIs</a>
-    <a ui-sref=".expectations" class="btn btn-primary">Expectations</a>
-    <a ui-sref=".glossary" class="btn btn-primary">Glossary</a>
-    <a ui-sref=".organization" class="btn btn-primary">NA Organization</a>
-
-</div> -->
+<div class="sidebar" sidebar-directive="state">
+  <a href="#" id="navigation-toggle" ng-click="toggleState()"><i class="fa fa-bars" ng-show="!state"></i><i class="fa fa-times" ng-show="state"></i></a>
+  <ul class="navigation">
+    <li class="navigation-items"> <a href="#/app/mykpi">My KPIs</a></li>
+    <li class="navigation-items"> <a href="#/app/expectations">Expectations</a></li>
+    <li class="navigation-items"> <a href="#/app/glossary">Glossary</a></li>
+    <li class="navigation-items"> <a href="#/app/organization">NA Organization</a></li>
+  </ul>
+</div>
 
 <div ui-view></div>

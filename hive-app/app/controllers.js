@@ -11,6 +11,12 @@ angular.module('hive.controllers', [])
 
   $scope.currentTab = '0';
 
+  // Sidemenu attributes and functions
+  $scope.state = false;  
+  $scope.toggleState = function() {
+      $scope.state = !$scope.state;
+  };
+
   // Form data for the login modal
   $scope.loginData = {};
 
