@@ -54,7 +54,8 @@
 }
 .show {
   left : 0;
-  box-shadow: 5px 2px 15px -5px #000;
+  /*box-shadow: 5px 2px 15px -5px #000;*/
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 .navigation {
   list-style : none;
@@ -77,9 +78,9 @@
 
 .nav-right {
   position: absolute;
-  right: 0px;
+  right: -100px;
   margin: 12px;
-  /*transition : 100ms;*/
+  transition : 100ms;
 }
 
 .custom-width {
@@ -88,9 +89,28 @@
   transition : 100ms;
 }
 
+#app-logo {
+  transition : 100ms;
+}
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) {
-  
+  .sidebar { 
+    left: 0; 
+  }
+  /*.nav-right {
+    right: 0px;
+  }*/
+  #content-view {
+    position: absolute;
+    width: calc(100% - 250px);
+    left: 250px;
+  }
+  #app-logo {
+    left: 250px;
+    position: relative;
+    transition : 100ms;
+  }
 }
 
 /* Landscape phone to portrait tablet */
