@@ -1,26 +1,35 @@
 <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
+
   <div class="navbar-header">
-    <a class="navbar-brand" style="padding-top: 8px;" ui-sref="#">
+
+    <a class="navbar-brand" ui-sref="#" style="height: inherit;">
       <img style="width:120px" src="https://hive.cgadc.com/hive/img/hive-capgemini-logo2.png" alt="Capgemini">
     </a>
+  
+    <a class="btn btn-default nav-right" ng-click="toggleState()">
+      <i class="glyphicon glyphicon-menu-hamburger"></i>
+    </a>
+
   </div>
-  <ul class="nav nav-tabs">
+
+  <!-- <ul class="nav nav-tabs custom-width">
     <li role="presentation" ng-class="{ 'active' : currentTab == 0 }" ng-click="currentTab = 0"><a href="#/app/mykpi">My KPIs</a></li>
     <li role="presentation" ng-class="{ 'active' : currentTab == 1 }" ng-click="currentTab = 1"><a href="#/app/expectations">Expectations</a></li>
     <li role="presentation" ng-class="{ 'active' : currentTab == 2 }" ng-click="currentTab = 2"><a href="#/app/glossary">Glossary</a></li>
     <li role="presentation" ng-class="{ 'active' : currentTab == 3 }" ng-click="currentTab = 3"><a href="#/app/organization">NA Organization</a></li>
     <li role="presentation" class="disabled"><a href="#/app/organization">Logout</a></li>
-  </ul>
+  </ul> -->
 
 </nav>
 
 <div class="sidebar" sidebar-directive="state">
-  <a href="#" id="navigation-toggle" ng-click="toggleState()"><i class="fa fa-bars" ng-show="!state"></i><i class="fa fa-times" ng-show="state"></i></a>
+  <!-- <a href="#" id="navigation-toggle" ng-click="toggleState()"><i class="fa fa-times fa-3x"></i></a> -->
   <ul class="navigation">
-    <li class="navigation-items"> <a href="#/app/mykpi">My KPIs</a></li>
-    <li class="navigation-items"> <a href="#/app/expectations">Expectations</a></li>
-    <li class="navigation-items"> <a href="#/app/glossary">Glossary</a></li>
-    <li class="navigation-items"> <a href="#/app/organization">NA Organization</a></li>
+    <li class="navigation-items close-button" ng-click="toggleState()"><i class="glyphicon glyphicon-menu-left"></i></li>
+    <li class="navigation-items"> <a href="#/app/mykpi" ng-click="toggleState()">My KPIs</a></li>
+    <li class="navigation-items"> <a href="#/app/expectations" ng-click="toggleState()">Expectations</a></li>
+    <li class="navigation-items"> <a href="#/app/glossary" ng-click="toggleState()">Glossary</a></li>
+    <li class="navigation-items"> <a href="#/app/organization" ng-click="toggleState()">NA Organization</a></li>
   </ul>
 </div>
 
