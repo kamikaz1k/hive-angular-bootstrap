@@ -3,7 +3,7 @@
   <div class="navbar-header">
 
     <a class="navbar-brand" ui-sref="#" style="height: inherit;">
-      <img style="width:120px" src="https://hive.cgadc.com/hive/img/hive-capgemini-logo2.png" alt="Capgemini">
+      <img id="app-logo" style="width:120px" src="https://hive.cgadc.com/hive/img/hive-capgemini-logo2.png" alt="Capgemini">
     </a>
   
     <a class="btn btn-default nav-right" ng-click="toggleState()">
@@ -25,7 +25,7 @@
 <div class="sidebar" sidebar-directive="state">
   <!-- <a href="#" id="navigation-toggle" ng-click="toggleState()"><i class="fa fa-times fa-3x"></i></a> -->
   <ul class="navigation">
-    <li class="navigation-items close-button" ng-click="toggleState()"><i class="glyphicon glyphicon-menu-left"></i></li>
+    <li class="navigation-items close-button" ng-click="state = false"><i class="glyphicon glyphicon-menu-left"></i></li>
     <li class="navigation-items"> <a href="#/app/mykpi" ng-click="toggleState()">My KPIs</a></li>
     <li class="navigation-items"> <a href="#/app/expectations" ng-click="toggleState()">Expectations</a></li>
     <li class="navigation-items"> <a href="#/app/glossary" ng-click="toggleState()">Glossary</a></li>
@@ -33,4 +33,4 @@
   </ul>
 </div>
 
-<div ui-view></div>
+<div id="content-view" ui-view></div>
