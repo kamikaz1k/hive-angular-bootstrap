@@ -211,6 +211,12 @@ table td:last-child {
     text-align: center;
 }
 
+@media (max-width: 767px) { 
+  #expectations-table th {
+    text-align: left;
+  }
+}
+
 #expectations-table tr:hover {
     background-color: #eaf4ff;
 }
