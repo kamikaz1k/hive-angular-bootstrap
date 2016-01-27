@@ -78,7 +78,8 @@
 
 .nav-right {
   position: absolute;
-  right: -100px;
+  visibility: hidden;
+  right: 0px;
   margin: 12px;
   transition : 100ms;
 }
@@ -116,7 +117,8 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
   .nav-right {
-    right: 0px;
+    /*right: 0px;*/
+    visibility: visible;
   }
   .custom-width {/*
     display: inline;
